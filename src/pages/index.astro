@@ -1,0 +1,80 @@
+---
+import Card from "../components/Card.astro";
+import Kategori from "../components/Kategori.astro";
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Lauritz.com</title>
+  </head>
+  <body>
+    <h1>Lauritz.com</h1>
+    <div class="card">
+      <div>
+        <Card
+          img="billede"
+          banner="SLUTTER OM 2 TIMER OG 34 MINUTTER"
+          titel="IKEA LÆNESTOL"
+          svg=""
+          lokation="Varens lokation"
+          bydel="Næstved"
+          vurdering="Vurderet til"
+          vurderingspris="DKK 40.000"
+          naestebud="NÆSTE BUD"
+          bud="DKK 30.000"
+          button="Se varen"
+        />
+      </div>
+      <div>
+        <Card
+          img="billede"
+          banner="SLUTTER OM 4 TIMER OG 12 MINUTTER"
+          titel="HAY SOFA"
+          ikon=""
+          lokation="Varens lokation"
+          bydel="Nørrebro"
+          vurdering="Vuderet til"
+          vurderingspris="DKK 25.000"
+          naestebud="NÆSTE BUD"
+          bud="DKK 12.000"
+          button="Se varen"
+        />
+      </div>
+    </div>
+
+    <div class="kategori">
+      <Kategori img="billede" titel="BILER OG BÅDE" />
+
+      <Kategori img="billede" titel="ELEKTRONIK" />
+
+      <Kategori img="billede" titel="GLAS, PORCELÆN OG KERAMIK" />
+    </div>
+  </body>
+</html>
+
+<style>
+  .card {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    font-family: "Raleway";
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+  }
+
+  .kategori {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem;
+  }
+</style>

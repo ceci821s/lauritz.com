@@ -1,0 +1,163 @@
+---
+const {
+  banner,
+  titel,
+  lokation,
+  bydel,
+  vurdering,
+  vurderingspris,
+  naestebud,
+  bud,
+  button,
+} = Astro.props;
+---
+
+<article>
+  <img src="/img/hey_stol.jpg" alt="" />
+  <div class="content">
+    <div class="banner">
+      <p class="banner_tekst">{banner}</p>
+    </div>
+    <div class="tekst_indhold">
+      <h2>{titel}</h2>
+      <div class="lokation">
+        <svg width="22" height="22" viewBox="0 0 24 24"
+          ><path
+            fill="#000000"
+            d="M12 12q.825 0 1.413-.588Q14 10.825 14 10t-.587-1.413Q12.825 8 12 8q-.825 0-1.412.587Q10 9.175 10 10q0 .825.588 1.412Q11.175 12 12 12Zm0 7.35q3.05-2.8 4.525-5.088Q18 11.975 18 10.2q0-2.725-1.738-4.463Q14.525 4 12 4Q9.475 4 7.737 5.737Q6 7.475 6 10.2q0 1.775 1.475 4.062Q8.95 16.55 12 19.35ZM12 22q-4.025-3.425-6.012-6.363Q4 12.7 4 10.2q0-3.75 2.413-5.975Q8.825 2 12 2t5.587 2.225Q20 6.45 20 10.2q0 2.5-1.987 5.437Q16.025 18.575 12 22Zm0-11.8Z"
+          ></path>
+        </svg>
+        <p>{lokation}</p>
+        <div class="bydel">
+          <p>{bydel}</p>
+        </div>
+      </div>
+      <div class="vurdering">
+        <p>{vurdering}</p>
+        <div class="pris">
+          <p>{vurderingspris}</p>
+        </div>
+      </div>
+      <div class="bud">
+        <h3>{naestebud}</h3>
+        <h3 class="bud_pris">{bud}</h3>
+      </div>
+      <div class="knap">
+        <button>{button}</button>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 25rem;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .banner {
+    background-color: var(--color-primary);
+    padding: 0.1rem;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  .content {
+    background-color: var(--color-secondary);
+  }
+
+  .tekst_indhold {
+    padding: 1.5rem;
+  }
+
+  svg {
+    margin-top: 0.8rem;
+  }
+
+  .lokation {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .bydel {
+    margin-left: 3rem;
+  }
+
+  .vurdering {
+    display: flex;
+    margin-left: 2.5rem;
+  }
+
+  .pris {
+    margin-left: 5.9rem;
+  }
+
+  .bud {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .knap {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    background-color: var(--color-primary);
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: var(--color-white);
+    border-radius: 5px;
+    border: none;
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  button:hover {
+    background-color: var(--color-h2);
+  }
+
+  /* fonte */
+
+  .banner_tekst {
+    font-family: "Quicksand";
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-family: "Raleway";
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--color-h2);
+  }
+
+  p {
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: 1.35rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .bud_pris {
+    font-family: "Raleway";
+    font-weight: 900;
+  }
+</style>

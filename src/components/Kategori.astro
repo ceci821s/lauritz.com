@@ -1,0 +1,59 @@
+---
+const { img, titel } = Astro.props;
+---
+
+<article>
+  <div class="container">
+    <div class="overlay">
+      <img src="/img/biler.jpg" alt="" />
+    </div>
+    <div class="tekst">
+      <h3>{titel}</h3>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    max-width: 25rem;
+    color: white;
+  }
+
+  /* .overlay {
+    background-color: var(--color-h2);
+    z-index: 200;
+  } */
+
+  .container {
+    position: relative;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    /* filter: grayscale(100%); */
+  }
+
+  .tekst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Raleway";
+    font-weight: 400;
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  /* fonte */
+
+  h3 {
+    font-family: "Raleway";
+    font-weight: 900;
+    font-size: 1.4rem;
+  }
+
+  h3:hover {
+    text-decoration: underline;
+  }
+</style>
